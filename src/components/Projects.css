@@ -1,0 +1,29 @@
+.projects {
+  background-color: var(--dark);
+  padding: var(--space-xxl) var(--space-md);
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.projects-cta {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

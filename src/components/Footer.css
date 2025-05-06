@@ -1,0 +1,122 @@
+.footer {
+    background-color: var(--dark);
+    padding: var(--space-md);
+    position: relative;
+}
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--primary), var(--accent), transparent);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+    padding: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+}
+.footer-logo {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+.footer-tagline {
+    color: var(--gray);
+}
+
+.footer-links {
+    display: flex;
+    /* gap: var(--space-lg); */
+}
+.footer-links-title {
+    font-size: 1.1rem;
+    margin-bottom: var(--space-md);
+    position: relative;
+    display: inline-block;
+}
+.footer-links-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 200px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--primary), transparent);
+    border-radius: 1px;
+    transition: var(--transition);
+}
+.footer-links-list {
+    list-style: none;
+}
+.footer-links-list li {
+    margin-bottom: 5px;
+}
+.footer-links-list a {
+    color: var(--gray);
+    text-decoration: none;
+    transition: all var(--anim-fast) ease;
+    position: relative;
+}
+.footer-links-list a::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width var(--anim-fast) ease;
+}
+.footer-links-list a:hover {
+    color: var(--light);
+}
+.footer-links-list a:hover::after {
+    width: 100%;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    text-align: center;
+    padding-top: var(--space-sm);
+    padding-left: var(--space-xl);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-credit {
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+
+@media (min-width: 768px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-brand {
+        flex-basis: 30%;
+    }
+
+    .footer-links {
+        flex-basis: 60%;
+    }
+
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}

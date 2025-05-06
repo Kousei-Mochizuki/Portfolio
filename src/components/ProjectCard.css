@@ -1,0 +1,140 @@
+.project-card {
+  background: linear-gradient(135deg, rgba(20, 20, 40, 0.8), rgba(10, 10, 25, 0.8));
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all var(--anim-medium) ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transform: translateY(0);
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--border-radius-lg);
+  padding: 2px;
+  background: linear-gradient(45deg, transparent, var(--primary), var(--secondary), transparent);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  opacity: 0;
+  transition: opacity var(--anim-medium) ease;
+}
+
+.project-card.hovered {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.project-card.hovered::before {
+  opacity: 1;
+}
+
+.project-image-container {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--anim-medium) ease;
+}
+
+.project-card.hovered .project-image {
+  transform: scale(1.05);
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(5, 5, 13, 0.2), rgba(5, 5, 13, 0.8));
+}
+
+.project-content {
+  padding: var(--space-lg);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-sm);
+  color: var(--light);
+  position: relative;
+  display: inline-block;
+  transition: color var(--anim-fast) ease;
+}
+
+.project-card.hovered .project-title {
+  color: var(--primary-light);
+}
+
+.project-description {
+  color: var(--gray);
+  margin-bottom: var(--space-md);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
+}
+
+.project-tag {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-sm);
+  background-color: rgba(102, 0, 255, 0.1);
+  color: var(--primary-light);
+  border-radius: var(--border-radius-sm);
+  font-size: 0.8rem;
+  transition: all var(--anim-fast) ease;
+}
+
+.project-card.hovered .project-tag {
+  background-color: rgba(102, 0, 255, 0.2);
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all var(--anim-fast) ease;
+  margin-top: auto;
+}
+
+.project-link-text {
+  margin-right: var(--space-xs);
+}
+
+.project-link-arrow {
+  transition: transform var(--anim-fast) ease;
+}
+
+.project-link:hover {
+  color: var(--light);
+}
+
+.project-link:hover .project-link-arrow {
+  transform: translateX(4px);
+}
