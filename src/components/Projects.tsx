@@ -18,7 +18,7 @@ const projectData: Project[] = [
     id: 1,
     title: "Modicter",
     description: "『コトダマ』の領域を上手く活用し、コトバのチカラを本に付与しながら進む3D領域変化パズルアクション。",
-    image: "public/images/Modicter_01.png",
+    image: "./public/images/Modicter_01.png",
     tags: ["Unity", "C#", "Game design", "Character design", "Level design", "3D Modeling (一部)"],
     link: "#"
   },
@@ -26,7 +26,7 @@ const projectData: Project[] = [
     id: 2,
     title: "爻鋼ノ刃",
     description: "刀を構え、敵の攻撃にあわせ交差。隙を狙って必殺技を叩き込め！",
-    image: "public/images/爻鋼ノ刃_01.png",
+    image: "./public/images/爻鋼ノ刃_01.png",
     tags: ["Unity", "C#", "Game design"],
     link: "#"
   },
