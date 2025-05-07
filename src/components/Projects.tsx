@@ -3,6 +3,11 @@ import ProjectCard from './ProjectCard';
 // import '../styles/Projects.css';
 import './Projects.css'
 
+// 画像参照テスト
+import GAME_IMAGE_01 from '/images/Modicter_01.png';
+import GAME_IMAGE_02 from '/images/爻鋼ノ刃_01.png';
+
+
 // Define project data type
 interface Project {
   id: number;
@@ -18,7 +23,7 @@ const projectData: Project[] = [
     id: 1,
     title: "Modicter",
     description: "『コトダマ』の領域を上手く活用し、コトバのチカラを本に付与しながら進む3D領域変化パズルアクション。",
-    image: "./public/images/Modicter_01.png",
+    image: GAME_IMAGE_01,
     tags: ["Unity", "C#", "Game design", "Character design", "Level design", "3D Modeling (一部)"],
     link: "#"
   },
@@ -26,7 +31,7 @@ const projectData: Project[] = [
     id: 2,
     title: "爻鋼ノ刃",
     description: "刀を構え、敵の攻撃にあわせ交差。隙を狙って必殺技を叩き込め！",
-    image: "./public/images/爻鋼ノ刃_01.png",
+    image: GAME_IMAGE_02,
     tags: ["Unity", "C#", "Game design"],
     link: "#"
   },
